@@ -4,13 +4,13 @@ Note: releasing to NPM shortly, for now works locally.
 
 ## Description
 
-`chatgpt-filehelper` is an easy to use tool for optimizing JavaScript and TypeScript files for use with Large Language Models like ChatGPT, Bard etc.
+`chatgpt-filehelper` is an easy to use tool for optimizing JavaScript and TypeScript files for use with Large Language Models like ChatGPT, Bard, Claude, etc..
 
 It removes unnecessary whitespace and characters, and combines linked files into one long text file, making it easier to work with models that have token limits for input, and saving the hassle of copy-pasting multiple files related to the file you're working on.
 
 ## Demo
 
-As an example, say I want to ask ChatGPT about index.ts.
+As an example, say I want to ask ChatGPT about the following file:
 
 ```ts
 import * as fs from "fs";
@@ -26,17 +26,19 @@ export function main(fileName: string): string {
 
 ChatGPT won't know about `processFileContent` or `resolveImportPath` unless they're uploaded too, and the imports of those files as well.
 
-Also, copy pasting all of those files may result in a token error.
+Also, copy pasting all of those files may result in an error.
 
 ![Too long](images/too_long.png)
 
-Using this project, `npm run gpt index.ts`, will generate a long minifed file that is hard to read for us but easy to read by ChatGPT. Simply copy paste it and ask questions knowing the GPT has the full context.
+Using this tool by running `npm run gpt index.ts`, will generate a long minifed file that is hard to read for us but easy to read by ChatGPT. Simply copy paste it and ask questions knowing the GPT has the full context.
 
 ![Generated File](images/generatedfile.png)
 
 ![ChatGPT reading combined file](images/chatgpt.png)
 
 ## Installation
+
+Note: releasing to NPM shortly, for now only works locally.
 
 To use `chatgpt-filehelper`, follow these installation steps:
 
