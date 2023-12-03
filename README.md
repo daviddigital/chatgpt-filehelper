@@ -2,7 +2,7 @@
 
 ## Description
 
-`chatgpt-filehelper` is an easy to use tool for optimizing JavaScript and TypeScript files for use with Large Language Models like ChatGPT, Bard, Claude, etc..
+`chatgpt-filehelper` is an easy to use tool for optimizing JavaScript and TypeScript files for use with Large Language Models like ChatGPT, Bard, Claude, etc. There is no affiliation with any of those tools or companies and this is free and open source.
 
 It removes unnecessary whitespace and characters, and combines imported files into one long text file, making it easier to work with models that have token limits for input, and saving the hassle of copy-pasting multiple files related to the file you're working on.
 
@@ -69,7 +69,7 @@ Replace `your-file.js` with the file you want to optimize. Chatgpt-filehelper wi
 This package employs several techniques to optimize the file:
 
 - It removes unnecessary whitespace, comments and new lines from the code, without using standard minification which GPTs struggle with.
-- It combines all import statements into a single text file, appending the filename, preserving their order.
+- It combines all (user generated - non npm packages) import files into a single text file, one per line, appending the filename, preserving their order.
 
 This results in a more compact file that can be used as input for chat models without exceeding token limits and giving full context of imported files.
 
