@@ -1,12 +1,10 @@
 # chatgpt-filehelper
 
-Note: releasing to NPM shortly, for now works locally.
-
 ## Description
 
 `chatgpt-filehelper` is an easy to use tool for optimizing JavaScript and TypeScript files for use with Large Language Models like ChatGPT, Bard, Claude, etc..
 
-It removes unnecessary whitespace and characters, and combines linked files into one long text file, making it easier to work with models that have token limits for input, and saving the hassle of copy-pasting multiple files related to the file you're working on.
+It removes unnecessary whitespace and characters, and combines imported files into one long text file, making it easier to work with models that have token limits for input, and saving the hassle of copy-pasting multiple files related to the file you're working on.
 
 ## Demo
 
@@ -32,27 +30,29 @@ Also, copy pasting all of those files may result in an error.
 
 Using this tool by running `npm run gpt index.ts`, will generate a long minifed file that is hard to read for us but easy to read by ChatGPT. Simply copy paste it and ask questions knowing the GPT has the full context.
 
+![Usage](/images/usage.png)
+
 ![Generated File](images/generatedfile.png)
 
 ![ChatGPT reading combined file](images/chatgpt.png)
 
 ## Installation
 
-Note: releasing to NPM shortly, for now only works locally.
-
 To use `chatgpt-filehelper`, follow these installation steps:
 
 1. Ensure that you have Node.js and npm (Node Package Manager) installed on your system.
 
-2. Install the package globally by running the following command in your terminal:
+2. Clone the repo `git clone https://github.com/daviddigital/chatgpt-filehelper`
 
-`npm install -g chatgpt-filehelper`
+3. Change into the directory `cd chatgpt-filehelper`
 
-3. Add the following script to your `package.json`
+4. Install the dependencies `npm install`
+
+5. Add the following script to your `package.json`
 
 ```
 "scripts": {
-  "gpt": "chatgpt-filehelper",
+    "gpt": "node dist/index.js",
 }
 ```
 
@@ -62,7 +62,7 @@ After installation, you can shrink JavaScript or TypeScript files along with all
 
 `npm run gpt your-file.js`
 
-Replace `your-file.js` with the file you want to optimize. Chatgpt-filehelper will search your current directory for the filename so the path isn't required but must be unique.
+Replace `your-file.js` with the file you want to optimize. Chatgpt-filehelper will search your current folder and subfolders for the filename so the path isn't required but must be unique.
 
 ## How It Works
 
@@ -72,6 +72,10 @@ This package employs several techniques to optimize the file:
 - It combines all import statements into a single text file, appending the filename, preserving their order.
 
 This results in a more compact file that can be used as input for chat models without exceeding token limits and giving full context of imported files.
+
+## Further improvements
+
+Add support for other file types / languages to handle imports in those languages.
 
 ## Contributing
 
