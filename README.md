@@ -48,14 +48,6 @@ To use `chatgpt-filehelper`, follow these installation steps:
 
 4. Install the dependencies `npm install`
 
-5. Add the following script to your `package.json`
-
-```
-"scripts": {
-    "gpt": "node dist/index.js",
-}
-```
-
 ## Usage
 
 After installation, you can shrink JavaScript or TypeScript files along with all of their non-node-module imports using the following command:
