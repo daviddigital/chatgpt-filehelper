@@ -28,7 +28,7 @@ Also, copy pasting all of those files may result in an error.
 
 ![Too long](images/too_long.png)
 
-Using this tool by running `npm run gpt index.ts`, will generate a long minifed file that is hard to read for us but easy to read by ChatGPT. Simply copy paste it and ask questions knowing the GPT has the full context.
+Using this tool by running `npm run gpt index.ts`, will generate a long minifed file that is hard to read for us but easy to read by LLMs. Simply copy paste it and ask questions knowing the GPT has the full context.
 
 ![Usage](/images/usage.png)
 
